@@ -8,11 +8,11 @@
 }
 
 .let_it_snow.snow_type_1 {
-	background: transparent url(../images/snow1.png) center center no-repeat;
+	background: transparent url(../images/snow1.svg) center center no-repeat;
 }
 
 .let_it_snow.snow_type_2 {
-	background: transparent url(../images/snow2.png) center center no-repeat;
+	background: transparent url(../images/snow2.svg) center center no-repeat;
 }
 
 .let_it_snow.snow_duration_1 {

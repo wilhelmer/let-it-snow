@@ -1,58 +1,75 @@
-#Let it snow
-The "Let it snow" is a lightweight, easy to modify jQuery plugin to add unobtrusive, non-blocking CSS3 snowfall to your page. It has JavaScript animation fallback to support legacy browsers (down to IE7).
+# Let it snow
 
-[Demo page](http://drawain.hu/let-it-snow-jquery-plugin/)
+"Let it snow" is a lightweight, easy to modify jQuery plugin to add unobtrusive, non-blocking CSS3 snowfall to your page.
 
-##Features
+This is an updated fork with the following changes:
+
+- Use SVG snowflakes instead of PNG for optimum quality
+- Removed Prefixfree, no longer needed with modern browsers
+- Removed Modernizer, no longer needed with modern browsers
+- Removed JS animation fallback
+- Updated jQuery version
+- Updated Readme
+
+## Features
+
 - Only 0.6kb gzipped
-- CSS3 animation (hardware accelerated on some browser)
+- CSS3 animation
 - Mobile support
-- JavaScript animation fallback if there is no CSS animation
-- Internet Explorer support (down to IE7)
 - Disabled pointer events to prevent blocking the UI
 - Attach to any container, not just the body
 
-##Prerequisites
-- You have to use [-prefix-free](http://leaverou.github.com/prefixfree/) JS library to support multiple browsers or add CSS prefixes in letitsnow.css
-- The plugin uses [Modernizr](http://modernizr.com/) to detect CSS animation support
+## Prerequisites
 
-##Using
-###Add prerequisites:
+- Requires [jQuery](https://jquery.com/download/).
 
-	<script src="js/modernizr.min.js"></script>
-	<script src="js/prefixfree.min.js"></script>
+## Using
 
-If you do not want to use the prefixfree, you can modify the css by adding propriate prefixes for other browsers. This library includes a base Modernizr package but you can use other builds.
+### Add prerequisites
 
-###Add plugin files:
+```html
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+```
 
-	<link rel="stylesheet" href="css/letitsnow.css">
-	<script src="js/letitsnow.min.js"></script>
+### Add plugin files:
 
-###Use on any container, eg. on the body:
+```html
+<link rel="stylesheet" href="css/letitsnow.css">
+<script src="js/letitsnow.min.js"></script>
+```
 
-	<script>
-		$(function() {
-			$('body').letItSnow();
-		});
-	</script>
+### Use on any container, eg. on the body:
+
+```html
+<script>
+    $(function() {
+        $('body').letItSnow();
+    });
+</script>
+```
 
 You can use on other container elements, for eg. a div with the id "box":
 
-	$('#box').letItSnow();
+```js
+$('#box').letItSnow();
+```
 
 It's advised to add **overflow-x: hidden** or **overflow: hidden** to the container element!
 
-##Configuration
+## Configuration
+
 You have to dive a little into the source if you want to modify the animation.
 
-###Slower or faster snowflakes
+### Slower or faster snowflakes
+
 In the *letitsnow.css* you have to modify the rules started with **.let_it_snow.snow_duration_**. The plugin randomly choose one of these rules to create snowflake animation. You have to modify *letitsnow.js* to set the animation durations for IE (search for **.animate**)
 
-###Shorter or longer snowflake routes
+### Shorter or longer snowflake routes
+
 In the *letitsnow.css* you have to modify the keyframes started with **snow_anim_**. The plugin randomly choose one of these rules to create snowflake animation. You have to modify *letitsnow.js* to set the snowflake route length for IE (search for **.animate**)
 
-##License
+## License
+
 MIT licensed
 
 Copyright (C) 2012 Fincza András, http://drawain.hu
