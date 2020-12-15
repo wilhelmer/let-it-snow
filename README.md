@@ -5,9 +5,11 @@
 This is an updated fork with the following changes:
 
 - Use SVG snowflakes instead of PNG for optimum quality
+- Dropped support for IE9 or lower
 - Removed Prefixfree, no longer needed with modern browsers
 - Removed Modernizer, no longer needed with modern browsers
 - Removed JS animation fallback
+- Updated index.html demo, removed background image
 - Updated jQuery version
 - Updated Readme
 
